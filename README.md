@@ -1,17 +1,37 @@
-# savmon_app_project
+﻿# SavMon - Aplikasi Manajemen Keuangan
 
-A new Flutter project.
+SavMon adalah aplikasi pencatatan keuangan pribadi yang membantu pengguna mencatat pemasukan dan pengeluaran, mengelola alokasi dana, serta melihat ringkasan transaksi bulanan.
 
-## Getting Started
+## Fitur
 
-This project is a starting point for a Flutter application.
+- Mencatat pemasukan dan pengeluaran beserta catatan.
+- Membagi pemasukan ke dalam lima kategori: Kebutuhan (36%), Darurat (18%), Investasi (18%), Tabungan (18%), dan Hiburan (10%).
+- Melihat saldo alokasi dan ringkasan transaksi bulanan.
+- Menelusuri riwayat transaksi berdasarkan bulan.
+- Mengubah nama profil dan menyembunyikan saldo.
+- Menyimpan data secara lokal di perangkat menggunakan SQLite.
 
-A few resources to get you started if this is your first Flutter project:
+> SavMon belum menyediakan login atau sinkronisasi data online. Data tersimpan di perangkat yang digunakan.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Teknologi
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter dan Dart
+- SQLite melalui paket `sqflite`
+
+## Menjalankan proyek
+
+Pastikan Flutter SDK sudah terpasang, lalu jalankan perintah berikut dari folder proyek:
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Struktur utama
+
+- `lib/main.dart` - antarmuka dan alur aplikasi.
+- `lib/database_helper.dart` - penyimpanan dan pengelolaan data lokal.
+
+## Catatan
+
+Persentase alokasi pemasukan saat ini ditetapkan di aplikasi. Pengeluaran dicatat pada kategori terkait dan tidak dapat melebihi saldo kategori tersebut.
